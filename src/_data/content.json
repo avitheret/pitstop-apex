@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "siteTitle": "PitStop APEX RS — Own Every Apex",
+    "accent": "#e5241b"
+  },
+  "hero": {
+    "image": "/assets/ph-hero.png",
+    "eyebrow": "PitStop Apex RS · Extreme Performance Summer",
+    "line1": "Own.",
+    "line2": "Every.",
+    "line3": "Apex.",
+    "tagAsmall": "Ultimate",
+    "tagAbig": "Track Day Weapon",
+    "tagBsmall": "Extreme",
+    "tagBbig": "Street Performance"
+  },
+  "intro": {
+    "eyebrow": "Presented by PitStop",
+    "title": "Apex RS",
+    "subtitle": "A street-legal track weapon, engineered to dominate.",
+    "lead": "Born on the limit and built for the road, the Apex RS fuses motorsport-grade compounds with everyday composure — so the drive to the circuit hits as hard as the laps.",
+    "badge": "Apex RS",
+    "image": "/assets/ph-tire-hero.png",
+    "benefits": [
+      { "html": "<b>UTQG 200</b> rated Extreme Performance Summer compound" },
+      { "html": "Engineered for <b>track dominance</b> and <b>street performance</b> alike" },
+      { "html": "Addictive levels of <b>steering response</b> and <b>mid-corner handling</b>" },
+      { "html": "<b>Unrivaled grip</b> derived from a motorsports-proven tread" },
+      { "html": "<b>Adrenaline-fueled acceleration</b> fused with <b>dynamic braking</b>" }
+    ]
+  },
+  "statement": {
+    "eyebrow": "For Drivers",
+    "html": "…who live life on the edge. The Apex RS takes <span class=\"accent\">track dominance</span> straight to the street."
+  },
+  "features": {
+    "eyebrow": "Engineered to Attack",
+    "title": "Every Rib Has a Job",
+    "intro": "A purpose-built tread architecture that turns input into instant, repeatable grip — corner after corner.",
+    "image": "/assets/ph-feat.png",
+    "items": [
+      { "title": "Extra-Wide Shoulder Ribs", "body": "Maximize the contact patch under load to hold the line through high-speed cornering." },
+      { "title": "Featherlight Construction", "body": "A lightweight casing trims rotating mass for peak responsiveness and quicker turn-in." },
+      { "title": "Motorsport-Derived Compound", "body": "A track-bred rubber formulation that reaches grip temperature fast and stays consistent." },
+      { "title": "Optimized Center Rib", "body": "A continuous center band stabilizes the tire under hard braking for shorter, surer stops." },
+      { "title": "RS-DNA Technology", "body": "Decades of racing know-how distilled into a tread pattern tuned for the absolute limit." },
+      { "title": "Precision Sidewall", "body": "A stiff, reinforced sidewall delivers crisp, communicative feedback at the wheel." }
+    ]
+  },
+  "dna": {
+    "watermark": "RS-DNA",
+    "cards": [
+      { "title": "PitStop DNA", "body": "Pushing boundaries and defying limits. PitStop was forged from a legacy of relentless performance. Ignite your passion, empower your pride, and drive your success as you conquer life on and off the track." },
+      { "title": "Total Dominance Plan", "body": "Experience unmatched performance with the Total Dominance Plan — high-performance tires that set a new standard in grip, handling, and durability. Engineered with cutting-edge technology and backed by independent testing, the Apex RS delivers on every drive." }
+    ]
+  },
+  "availability": {
+    "eyebrow": "Availability",
+    "number": "40",
+    "title": "Sizes at Launch",
+    "body": "Over 40 sizes set to release, accommodating the most popular fitments for ultra-high-performance applications — from compact track toys to wide-body monsters.",
+    "legal": "Apex RS is USDOT street legal only",
+    "image": "/assets/ph-avail.png"
+  },
+  "resources": {
+    "eyebrow": "PitStop Apex RS Resources",
+    "title": "Get the Details",
+    "cards": [
+      { "title": "Detailed Product Specifications", "body": "Full Apex RS product specifications, sizing and load ratings. Note: all measurements are subject to change upon official size release.", "link": "#", "linkLabel": "Download" },
+      { "title": "Tire Care & Safety Guidelines", "body": "Detailed tire care procedures, break-in best practices and safety guidelines for getting the most from your Apex RS.", "link": "#", "linkLabel": "Download" }
+    ]
+  },
+  "cta": {
+    "headline": "Conquer the Corner",
+    "sub": "Find your fitment · Locate a dealer",
+    "button": "Find a Dealer",
+    "buttonLink": "#"
+  },
+  "footer": {
+    "copyright": "© Copyright PitStop Performance Tire 2026",
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "youtube": "https://youtube.com/"
+  }
+}

@@ -1,0 +1,149 @@
+# Decap CMS configuration
+# ----------------------------------------------------------------------------
+# Backend: Netlify "git-gateway" (works once Netlify Identity + Git Gateway are
+# enabled on the site — see README). If you'd rather authenticate straight with
+# GitHub, swap the backend block for:
+#   backend:
+#     name: github
+#     repo: YOUR-USER/YOUR-REPO
+#     branch: main
+# (the GitHub backend needs an OAuth app — git-gateway is simpler on Netlify.)
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are committed, and the URL they resolve to on the site.
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Edits commit to a PR-style flow off; set to true if you want draft review.
+publish_mode: simple
+
+collections:
+  - name: "page"
+    label: "Landing Page"
+    delete: false
+    files:
+      - name: "content"
+        label: "PitStop Apex — All Content"
+        file: "src/_data/content.json"
+        description: "Everything on the landing page. Edit text and swap images here."
+        fields:
+          - label: "Site"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Browser tab title", name: "siteTitle", widget: "string" }
+              - { label: "Accent colour (hex)", name: "accent", widget: "string", hint: "e.g. #e5241b" }
+
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Background image", name: "image", widget: "image" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline line 1", name: "line1", widget: "string" }
+              - { label: "Headline line 2", name: "line2", widget: "string" }
+              - { label: "Headline line 3 (dimmed)", name: "line3", widget: "string" }
+              - { label: "Tag A — small", name: "tagAsmall", widget: "string" }
+              - { label: "Tag A — big", name: "tagAbig", widget: "string" }
+              - { label: "Tag B — small", name: "tagBsmall", widget: "string" }
+              - { label: "Tag B — big", name: "tagBbig", widget: "string" }
+
+          - label: "Intro / Benefits"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Lead paragraph", name: "lead", widget: "text" }
+              - { label: "Image badge", name: "badge", widget: "string" }
+              - { label: "Product image", name: "image", widget: "image" }
+              - label: "Benefit bullets"
+                name: "benefits"
+                widget: "list"
+                summary: "{{fields.html}}"
+                field: { label: "Text (HTML allowed, e.g. <b>bold</b>)", name: "html", widget: "string" }
+
+          - label: "Statement"
+            name: "statement"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Statement (HTML allowed)", name: "html", widget: "text" }
+
+          - label: "Feature Callouts"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Centre image (tire)", name: "image", widget: "image" }
+              - label: "Feature items (first 3 = left column, next 3 = right)"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+
+          - label: "Brand DNA"
+            name: "dna"
+            widget: "object"
+            fields:
+              - { label: "Watermark word", name: "watermark", widget: "string" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+
+          - label: "Availability"
+            name: "availability"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Big number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Legal line", name: "legal", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "Resources"
+            name: "resources"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Download cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+                  - { label: "Link URL", name: "link", widget: "string" }
+                  - { label: "Link label", name: "linkLabel", widget: "string" }
+
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Sub line", name: "sub", widget: "string" }
+              - { label: "Button label", name: "button", widget: "string" }
+              - { label: "Button URL", name: "buttonLink", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+              - { label: "YouTube URL", name: "youtube", widget: "string" }
