@@ -225,6 +225,8 @@
     .scrollcue i{animation:none}
   }
 </style>
+<!-- Netlify Identity widget: handles invite / recovery / confirmation tokens on the site root -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -436,6 +438,18 @@
   document.getElementById('hamb').addEventListener('click', () => mm.classList.add('open'));
   document.getElementById('closeMenu').addEventListener('click', () => mm.classList.remove('open'));
   mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+</script>
+<!-- After accepting an invite / setting a password, send the user to the CMS -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', function (user) {
+      if (!user) {
+        window.netlifyIdentity.on('login', function () {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
 </script>
 </body>
 </html>
